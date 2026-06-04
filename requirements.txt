@@ -1,0 +1,12 @@
+pandas
+numpy
+matplotlib
+seaborn
+plotly
+missingno
+wordcloud
+nltk
+scipy
+scikit-learn
+tqdm
+ipykernel
