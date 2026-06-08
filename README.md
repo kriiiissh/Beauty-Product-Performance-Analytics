@@ -15,6 +15,29 @@ The goal of this project is to model real-world cosmetic product performance and
 
 ---
 
+## 📊 Executive & Business Reports
+
+This project produces professional, executive-ready deliverables for stakeholders:
+*   **[Interactive HTML Dashboard](reports/beauty_product_analytics_report.html)**: A premium, dark-mode dashboard styled with Sephora brand colors. It supports interactive tabs for Inventory Profiles, Customer Demographics, NLP Sentiment analysis, and Strategic Business Insights.
+*   **[Executive Analytics Report (Markdown)](reports/beauty_product_analytics_report.md)**: A standalone report with formatted tables, metrics, and figures, rendering natively directly on GitHub.
+*   **[Executed Jupyter Notebooks](notebooks/)**: Step-by-step notebooks fully executed with printed statistical tables and embedded charts.
+
+### 🌐 Hosting the Interactive Dashboard on GitHub Pages
+Because GitHub displays raw HTML files as code, the best way to present the interactive dashboard to recruiters is via **GitHub Pages**:
+1. Create a `docs/` folder and copy the HTML dashboard as `index.html`:
+   ```bash
+   # Run from repository root
+   mkdir -p docs
+   cp reports/beauty_product_analytics_report.html docs/index.html
+   cp -r reports/figures docs/figures
+   ```
+2. Push your changes to your GitHub repository.
+3. In your GitHub repository settings, navigate to **Pages** (under the "Code and automation" section).
+4. Under **Build and deployment**, set the source to **Deploy from a branch**, choose your branch (e.g., `main`), and set the folder to `/docs`. Click **Save**.
+5. Your interactive portfolio site will be live at `https://<your-username>.github.io/<repo-name>/`!
+
+---
+
 ## 📁 Repository Structure
 ```
 eda-sephora/
@@ -48,6 +71,9 @@ Pricing distributions show that Fragrance has the highest median price, while Sk
 
 ![Price by Category](reports/figures/price_by_category.png)
 
+> [!TIP]
+> **Inventory Takeaway**: Skincare and Makeup make up the vast majority of products in Sephora's inventory (56.4% combined). Fragrance commands the highest premium pricing (Average: $87.26, Median: $80.00) but represents a smaller share of overall listings, indicating a high-margin opportunity. SEPHORA COLLECTION is the volume leader (352 products) with a budget-friendly entry price ($16.38).
+
 ---
 
 ### 2. Historical Review Trends & Demographics
@@ -58,6 +84,9 @@ Review counts show a strong seasonal trend, peaking annually during the holiday 
 Reviewers skew heavily towards **Dry** and **Combination** skin types, with **Light** and **Fair** skin tones being the most frequently reported profiles in the review datasets.
 
 ![Reviewer Demographic Profiles](reports/figures/reviewer_profiles.png)
+
+> [!NOTE]
+> **Demographics Takeaway**: Combination skin represents nearly half of all customer reviews (49.8%), meaning e-commerce personalization and inventory tagging should heavily prioritize combination-friendly formulations. Review volume peaked in 2020-2021 during lockdowns and exhibits a recurring annual seasonal surge in Nov-Dec.
 
 ---
 
@@ -79,6 +108,9 @@ VADER sentiment analyzer results demonstrate a strong positive correlation betwe
 
 ![Sentiment vs Rating](reports/figures/sentiment_vs_rating.png)
 
+> [!TIP]
+> **Sentiment Efficacy Takeaway**: Textual sentiment scores align monotonically with star ratings (average sentiment ranges from 0.010 for 1-star to 0.757 for 5-star), confirming rating integrity. Satisfied customers focus on positive sensory elements ("love", "cream", "great"), while dissatisfied reviews center on skin irritation and formulation failures ("dry", "face", "acne").
+
 ---
 
 ### 4. Strategic Business Insights
@@ -88,6 +120,15 @@ To translate raw data into business value, we developed specific market indicato
 *   **Overrated Products**: Products priced over $80 with ratings $\le 3.5$. These are luxury items failing to meet expectations, representing targets for formula updates.
 
 ![Value for Money Products](reports/figures/value_for_money.png)
+
+> [!IMPORTANT]
+> **Value Optimization**: SEPHORA COLLECTION (swipes, cotton pads) and The Ordinary (Niacinamide serum) dominate this index, representing exceptional customer value. These products generate massive customer engagement and positive ratings relative to their extremely low unit prices.
+
+> [!NOTE]
+> **Hidden Gems Campaign**: Rare Beauty (Blush Brush) and Fenty Beauty (Lip Gloss Trio) produce highly-rated items that have not yet reached high review counts. Spotlighting these products in homepage features or email campaigns offers a high-ROI opportunity to convert highly loyal user groups into mainstream sales.
+
+> [!WARNING]
+> **Luxury Product Auditing**: Ultra-premium items like Dr. Barbara Sturm Sun Drops ($150, 2.72★) and FOREO LUNA fofo ($89, 2.89★) are major customer friction points. These high-ticket, low-rating products present significant brand liability and should undergo R&D formulation auditing or retail shelf-space reassignment.
 
 ---
 
