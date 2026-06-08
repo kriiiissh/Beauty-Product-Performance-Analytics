@@ -1,5 +1,7 @@
 # Sephora E-Commerce Analytics: Data Science, NLP & Business Intelligence
 
+🚀 **Live Interactive Dashboard**: [https://kriiiissh.github.io/Beauty-Product-Performance-Analytics/](https://kriiiissh.github.io/Beauty-Product-Performance-Analytics/)
+
 ![Project Banner](reports/figures/sephora_project_banner.png)
 
 ## 📌 Project Overview
